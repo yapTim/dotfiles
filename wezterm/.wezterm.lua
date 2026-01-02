@@ -21,5 +21,14 @@ local wsl_domains = wezterm.default_wsl_domains()
 config.wsl_domains = wsl_domains
 config.default_domain = 'WSL:Ubuntu'
 
+-- Custom Keybinds
+config.keys = {
+  {
+    key = 'w',
+    mods = 'CTRL',
+    action = wezterm.action.CloseCurrentPane { confirm = false },
+  },
+}
+
 -- Finally, return the configuration to wezterm:
 return config
